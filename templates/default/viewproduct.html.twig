@@ -6,8 +6,7 @@
     <div class="container">
 
         <!-- Portfolio Item Heading -->
-        <h1 class="my-4">{{ Products.name }}
-        </h1>
+        <h1 class="my-4">{{ Products.name }}</h1>
 
         <!-- Portfolio Item Row -->
         <div class="row">
@@ -26,7 +25,11 @@
                 </ul>
 
                 <div class="col-md-3">
-                    <a href="/toevoegen/{{ Products.id }}"><h4 class="my-5">Toevoegen</h4></a>
+                    {% if app.user %}
+                        <a href="/toevoegen/{{ Products.id }}"><h4 class="my-5">Toevoegen</h4></a>
+                    {% else %}
+                        <h4>Login to add to cart</h4>
+                    {% endif %}
                 </div>
             </div>
         </div>

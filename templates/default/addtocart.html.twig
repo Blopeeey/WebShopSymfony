@@ -13,6 +13,7 @@
                         <th>Amount</th>
                         <th>Price</th>
                         <th>Total price</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -20,7 +21,9 @@
                     <tr>
                         <td>{{ product[2].name }}</td>
                         <td>{{ product[1] }}</td>
-                        <td>{{ product[2].price }}</td>
+                        <td>€{{ product[2].price }}</td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     {% endfor %}
                     </tbody>
@@ -28,7 +31,8 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td>{{ totaal }}</td>
+                        <td>€{{ totaal }}</td>
+                        <td><a href="/checkout/">Purchase</a></td>
                     </tr>
                 </table>
             </div>

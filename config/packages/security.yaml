@@ -32,3 +32,5 @@ security:
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
         - { path: ^/product/, role: ROLE_ADMIN }
+        - { path: ^/toevoegen/, role: ROLE_USER }
+        - { path: ^/toevoegen/, role: ROLE_ADMIN }
