@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <!-- Portfolio Item Heading -->
+        <h1 class="my-4">{{ Products.name }}
+        </h1>
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-8">
+                <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="my-3">Product Description</h3>
+                <p>{{ Products.description }}</p>
+
+                <h3 class="my-3">Product Price</h3>
+                <ul>
+                    <li>€{{ Products.price }}</li>
+                </ul>
+
+                <div class="col-md-3">
+                    <a href="/toevoegen/{{ Products.id }}"><h4 class="my-5">Toevoegen</h4></a>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+{% endblock %}

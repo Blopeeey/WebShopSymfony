@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block body %}
+<h2 class="my-4" style="text-align: center;">Welcome</h2>
+    {% if Products %}
+        <div class="container">
+            <!-- Page Heading -->
+            <h1 class="my-4">Products</h1>
+            <div class="row">
+                {% for prod in Products %}
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="/products/{{ prod.id }}">{{ prod.name }}</a>
+                            </h4>
+                            <p class="card-text">{{ prod.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% else %}
+        No products available
+    {% endif %}
+{% endblock %}
